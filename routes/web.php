@@ -42,13 +42,7 @@ Route::get('tampil/{kategori:kategori}', [IndexController::class, 'tampil'])->na
 Route::get('/lupa-password', [LupaPasswordController::class,'index']);
 Route::get('/search', [SearchController::class, 'search'])->name('search');
 Route::get('/detail-buku/{kategori:kategori}/{buku:slug}', [DetailBukuController::class, 'index'])->name('detail-buku');
-Route::get('/email/verify', function () {
-        return view('auth.verify-email');
-    })->name('verification.notice');
-Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
-    $request->fulfill();
-        return redirect('/login');
-    })->middleware(['signed'])->name('verification.verify');
+
 
 Route::middleware(['anggota'])->group(function () {
     Route::resource('/login', LoginUserController::class);
@@ -72,6 +66,14 @@ Route::middleware(['useranggota'])->group(function () {
     Route::get('aktifitas', [ProfileController::class, 'aktifitas'])->name('aktifitas');
     Route::post('aktifitas/{aktifitas:id}', [ProfileController::class, 'hapusaktifitas'])->name('aktifitasus');
     Route::get('cetakpinjamanuser/{anggota:email}/{pinjaman:id}', [CetakController::class, 'cetakpinjamanuser'])->name('cetakpinjamanuser');
+    Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+    })->middleware('auth')->name('verification.notice');
+    Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+    return redirect('/home');
+    })->middleware(['auth', 'signed'])->name('verification.verify');    
+
 });
 
 Route::middleware(['auth', 'admin'])->group(function () {
