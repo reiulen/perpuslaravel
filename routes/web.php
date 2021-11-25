@@ -71,7 +71,7 @@ Route::middleware(['useranggota'])->group(function () {
     })->middleware('auth')->name('verification.notice');
     Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
-    return redirect('/home');
+    return redirect('/');
     })->middleware(['auth', 'signed'])->name('verification.verify');    
 
 });

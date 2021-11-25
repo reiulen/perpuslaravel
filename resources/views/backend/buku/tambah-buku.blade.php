@@ -124,7 +124,7 @@
                         <div class="form-group row mb-4">
                             <label class="text-md-right col-12 col-md-3 col-lg-3" for="customFile">Gambar</label>
                             <div class="col-md-3">
-                                <img src="{{ asset('gambar.jpg'); }}" class="img-thumbnail img-preview">
+                                <img src="{{ asset('storage/gambar.jpg'); }}" class="img-thumbnail img-preview">
                                 @error('gambar')
                                     {{ $message }}
                                 @enderror

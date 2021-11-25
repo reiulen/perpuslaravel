@@ -134,10 +134,10 @@ body{
     border: none !important;
     justify-content: center;
     align-items: center;
-    width: 240px;
+    width: 190px;
     height: 280px;
     cursor: pointer;
-    margin-right: 200px !important;
+    margin-right: 10px !important;
 }
 
 .slider-buku-terpopuler .card::after{
@@ -218,8 +218,8 @@ body{
     border: none !important;
     justify-content: center;
     align-items: center;
-    width: 160px;
-    height: 240px;
+    width: 190px !important;
+    height: 280px !important;
     margin-right: 30px !important;
     cursor: pointer;
 }
@@ -290,7 +290,7 @@ body{
 }
 
 .hasil-search .gambar-search img{
-    height: 240px;
+    height: 280px;
     width: 200px;
     object-fit: cover;
     object-position: center;
@@ -323,7 +323,7 @@ body{
 
 .detail-buku .gambar-detail-buku img{
     height: 320px;
-    width: 280px;
+    width: 200px;
     border-radius: 10px;
     object-fit: cover;
     object-position: center;
@@ -359,8 +359,8 @@ body{
     border: none !important;
     justify-content: center;
     align-items: center;
-    width: 160px;
-    height: 240px;
+    width: 190px !important;
+    height: 280px !important;
     margin-right: 30px !important;
     cursor: pointer;
 }
@@ -463,8 +463,8 @@ body{
     border: none !important;
     justify-content: center;
     align-items: center;
-    width: 160px;
-    height: 240px;
+    width: 190px !important;
+    height: 280px !important;
     margin-right: 30px !important;
     cursor: pointer;
 }
@@ -657,12 +657,12 @@ footer ul li{
 
 @media (max-width:440px) {
     .buku-kategori .card{
-        width: 300px !important;
-        height: 300px !important;
+        width: 170px !important;
+        height: 280px !important;
     }
     .hasil-search .gambar-search img{
-        height: 160px;
-        width: 120px;
+        height: 180px;
+        width: 100px;
         object-fit: cover;
         object-position: center;
     }
@@ -701,16 +701,16 @@ footer ul li{
         object-fit: cover;
     }
     .slider-buku-terpopuler .card{
-        width: 240px;
-        height: 280px;
+        width: 190px !important;
+        height: 280px !important;
     }
     .buku-kategori .card{
-        width: 240px;
-        height: 280px;
+        width: 190px !important;
+        height: 280px !important;
     }
     .detail-buku-rekomendasi .card{
-        width: 240px;
-        height: 280px;
+        width: 190px !important;
+        height: 280px !important;
     }
 
 }

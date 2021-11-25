@@ -14,7 +14,7 @@
                 </div>
                 <div class="card-body">
                    <div class="thumbnail-pinjam text-center pb-3">
-                        <img src="{{ asset('storage/'.$pinjam->buku->gambar_buku)}}"  class="img-thumbnail" style="width: 200px; height:220px; object-fit:cover; object-position:center; justify-content:center; align-items:center;">
+                        <img src="{{ asset('storage/'.$pinjam->buku->gambar_buku)}}"  class="img-thumbnail" style="width: 200px; height:280px; object-fit:cover; object-position:center; justify-content:center; align-items:center;">
                     <h5 class="py-2">{{ $pinjam->judul_buku }}</h5>
                    </div>
                     <table class="table">

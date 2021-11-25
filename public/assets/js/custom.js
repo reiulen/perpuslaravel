@@ -43,8 +43,8 @@
         loop: true,
         dots: false,
         autoplay: true,
+        margin: 0,
         autoplayTimeout: 6000,
-        items: 4,
         nav: true,
         navContainer: ".button-slider",
         navText: [
@@ -61,23 +61,27 @@
                 margin: 180,
             },
             500: {
-                items: 2,
+                items: 3,
                 margin: 100,
             },
             600: {
-                items: 2,
+                items: 3,
                 margin: 80,
             },
             750: {
                 items: 3,
                 margin: 80,
             },
+            900: {
+                items: 3,
+                margin: 80,
+            },
             1000: {
-                items: 4,
+                items: 5,
                 margin: 100,
             },
             1200: {
-                items: 4,
+                items: 5,
             },
         },
     });

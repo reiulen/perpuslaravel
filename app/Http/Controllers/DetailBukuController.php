@@ -26,7 +26,7 @@ class DetailBukuController extends Controller
             Buku::findOrFail($buku->id)->update(['views'=> $buku->views+1]);
         }
         $title = $buku->judul_buku;
-        $bukupopuler = Buku::with(['kategori'])->where(['status' => 'Publish'])->orderbydesc('views')->latest()->limit(5)->get();
+        $bukupopuler = Buku::with(['kategori'])->where(['status' => 'Publish'])->latest()->limit(5)->get();
         return view('detail-buku', compact('title','buku', 'bukupopuler', 'pinjam'));
     }
 }

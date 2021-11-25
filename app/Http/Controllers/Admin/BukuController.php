@@ -163,7 +163,7 @@ class BukuController extends Controller
             $gambar = $request->file('gambar_buku')->store('upload/sampul');
         }
 
-        if($request->gambar_buku != $buku->gambar_buku AND $buku->gambar_buku != 'gambar.jpg'){
+        if($request->gambar_buku AND $buku->gambar_buku != 'gambar.jpg'){
             Storage::delete($buku->gambar_buku);
         }
 
@@ -201,7 +201,7 @@ class BukuController extends Controller
     public function destroy($id)
     {
         $gambar = Buku::findorFail($id);
-        if($gambar != 'gambar.jpg'){
+        if($gambar->gambar_buku != 'gambar.jpg'){
             Storage::delete($gambar->gambar_buku);
         }
         Buku::destroy($id);

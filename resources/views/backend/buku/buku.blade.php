@@ -80,7 +80,7 @@
                             <tr>
                                 <td>{{ $row->judul_buku }}</td>
                                 <td style="cursor:pointer;" data-toggle="modal"  data-target="#gambar_buku{{ $row->id }}" ><img src="{{ asset('storage/'.$row->gambar_buku) }}" class="img-thumbnail" style="width:150px; border-radius:6px; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);"></td>
-                                <td>{!!$row->deskripsi !!}</td>
+                                <td>{!! substr($row->deskripsi, 0, 150) !!}</td>
                                 <td>{{ $row->jumlah_buku }}</td>
                                 <td>{{ $row->pinjaman }}</td>
                                 <td><a href="{{ route('kategori', $row->kategori) }}">{{ $row->kategori->kategori }}</a></td>

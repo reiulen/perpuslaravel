@@ -130,7 +130,7 @@
                             <label class="text-md-right col-12 col-md-3 col-lg-3" for="customFile">Gambar</label>
                             <div class="col-md-3">
                                 <img src="{{ asset('storage/'.$data->gambar_buku); }}" class="img-thumbnail img-preview">
-                                @error('gambar')
+                                @error('gambar_buku')
                                     {{ $message }}
                                 @enderror
                                 <p class="text-small text-danger pt-2">*Gambar maksimum 2mb</p>

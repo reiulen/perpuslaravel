@@ -22,7 +22,7 @@
                 $i = 1;
             @endphp
             @foreach($bukupopuler as $row)
-                <div class="card" style="background-image:url({{ asset('gambar.jpg') }}) !important; background-size:cover !important; background-position:center !important; border-radius:12px;">
+                <div class="card" style="background-image:url({{ asset('storage/'.$row->gambar_buku) }}) !important; background-size:cover !important; background-position:center !important; border-radius:12px;">
                     <h1 class="display-2">{{ $i++ }}</h1>
                     <div class="content">
                         <h4>{{ $row->judul_buku }}</h4>

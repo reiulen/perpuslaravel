@@ -17,7 +17,7 @@
                        <div class="row pb-3">
                            <div class="col-md-4 text-center">
                                 <p class="pb-2 my-0">{{ $buku->judul_buku }}</p>
-                                <img src="{{ asset('storage/'.$buku->gambar_buku) }}" class="img-thumbnail" style="width: 200px; height:220px; object-fit:cover; object-position:center; justify-content:center; align-items:center;">
+                                <img src="{{ asset('storage/'.$buku->gambar_buku) }}" class="img-thumbnail" style="width: 200px; height:280px; object-fit:cover; object-position:center; justify-content:center; align-items:center;">
                            </div>
                            <div class="col-md-8 px-5 pt-4">
                                 <form action="{{ route('pinjam', $buku->id) }}" method="POST" class="needs-validation" novalidate="">
